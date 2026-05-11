@@ -1,0 +1,28 @@
+{
+  "colors": {
+    "light": {
+      "background": "#F8FAFC",
+      "foreground": "#101828",
+      "card": "#FFFFFF",
+      "muted": "#EEF2F6",
+      "mutedForeground": "#667085",
+      "border": "#D9E2EC",
+      "primary": "#0F766E",
+      "primaryForeground": "#FFFFFF",
+      "accent": "#2563EB",
+      "icon": "#64748B"
+    },
+    "dark": {
+      "background": "#0B1220",
+      "foreground": "#F8FAFC",
+      "card": "#111827",
+      "muted": "#1E293B",
+      "mutedForeground": "#CBD5E1",
+      "border": "#334155",
+      "primary": "#2DD4BF",
+      "primaryForeground": "#042F2E",
+      "accent": "#60A5FA",
+      "icon": "#94A3B8"
+    }
+  }
+}
