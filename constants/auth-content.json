@@ -1,0 +1,61 @@
+{
+  "onboarding": {
+    "cards": [
+      {
+        "eyebrowLeft": "Mobile App",
+        "eyebrowCenter": "Prototype",
+        "eyebrowRight": "15 Sept",
+        "title": "Complete Landing Page",
+        "description": "Design and share on dribbble",
+        "image": "https://picsum.photos/seed/pario-mobile-app/320/180"
+      },
+      {
+        "eyebrowLeft": "Landing",
+        "eyebrowCenter": "Website",
+        "eyebrowRight": "Animation",
+        "title": "Learn 3D Modeling in Cinema",
+        "description": "Design and share on dribbble",
+        "image": "https://picsum.photos/seed/pario-modeling/320/180"
+      }
+    ],
+    "title": "Get Things Done,\nOne Task at a Time",
+    "description": "Organize your tasks, set priorities, and track progress easily",
+    "cta": "Get Started"
+  },
+  "login": {
+    "title": "Nice to have you back",
+    "description": "Pick up where you left off and keep your tasks moving forward.",
+    "oauth": "Continue with Google",
+    "divider": "Or continue with",
+    "submit": "Sign In",
+    "forgotPassword": "Forgot password?",
+    "switchPrompt": "Need an account?",
+    "switchAction": "Sign up"
+  },
+  "signup": {
+    "title": "Nice to have you back",
+    "description": "Pick up where you left off and keep your tasks moving forward.",
+    "oauth": "Continue with Google",
+    "divider": "Or continue with",
+    "submit": "Sign Up",
+    "terms": "Yes, I understand and agree to the",
+    "termsLink": "https://pario.site",
+    "switchPrompt": "Already have an account?",
+    "switchAction": "Sign in",
+    "privacy": "Terms of Service and Privacy Policy"
+  },
+  "forgotPassword": {
+    "title": "Reset your password",
+    "description": "Enter your email and we will send a verification code to help you get back in.",
+    "submit": "Send Code",
+    "backAction": "Back to sign in"
+  },
+  "otp": {
+    "title": "Check your email",
+    "description": "Enter the 6-digit code we sent to verify your account.",
+    "helper": "Enter the code sent to your email.",
+    "submit": "Verify Code",
+    "resend": "Resend code",
+    "backAction": "Use another email"
+  }
+}

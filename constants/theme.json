@@ -1,28 +1,55 @@
 {
+  "fonts": {
+    "sans": [
+      "Instrument Sans",
+      "ui-sans-serif",
+      "system-ui",
+      "sans-serif",
+      "Apple Color Emoji",
+      "Segoe UI Emoji",
+      "Segoe UI Symbol",
+      "Noto Color Emoji"
+    ]
+  },
   "colors": {
+    "brand": {
+      "parioGreen": "#0B5D3B",
+      "parioGreenHover": "#0E7548",
+      "parioAmber": "#F0A500",
+      "parioAmberHover": "#FFB522",
+      "parioInk": "#0E1116",
+      "parioInkRaised": "#161A21",
+      "parioInkBorder": "#232831"
+    },
     "light": {
-      "background": "#F8FAFC",
-      "foreground": "#101828",
+      "background": "#FFFFFF",
+      "foreground": "#0E1116",
       "card": "#FFFFFF",
-      "muted": "#EEF2F6",
-      "mutedForeground": "#667085",
-      "border": "#D9E2EC",
-      "primary": "#0F766E",
+      "muted": "#F7F4EA",
+      "mutedForeground": "#5A6472",
+      "border": "#E6E1D4",
+      "primary": "#0B5D3B",
+      "primaryHover": "#0E7548",
       "primaryForeground": "#FFFFFF",
-      "accent": "#2563EB",
-      "icon": "#64748B"
+      "accent": "#F0A500",
+      "accentHover": "#FFB522",
+      "accentForeground": "#0E1116",
+      "icon": "#5A6472"
     },
     "dark": {
-      "background": "#0B1220",
-      "foreground": "#F8FAFC",
-      "card": "#111827",
-      "muted": "#1E293B",
-      "mutedForeground": "#CBD5E1",
-      "border": "#334155",
-      "primary": "#2DD4BF",
-      "primaryForeground": "#042F2E",
-      "accent": "#60A5FA",
-      "icon": "#94A3B8"
+      "background": "#0E1116",
+      "foreground": "#FFFFFF",
+      "card": "#161A21",
+      "muted": "#232831",
+      "mutedForeground": "#C9D1D9",
+      "border": "#232831",
+      "primary": "#0B5D3B",
+      "primaryHover": "#0E7548",
+      "primaryForeground": "#FFFFFF",
+      "accent": "#F0A500",
+      "accentHover": "#FFB522",
+      "accentForeground": "#0E1116",
+      "icon": "#C9D1D9"
     }
   }
 }
