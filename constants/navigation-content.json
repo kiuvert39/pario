@@ -1,0 +1,34 @@
+{
+  "bottomNav": [
+    {
+      "key": "home",
+      "label": "Home",
+      "route": "/home",
+      "icon": "home"
+    },
+    {
+      "key": "portfolio",
+      "label": "Portfolio",
+      "route": "/portfolio",
+      "icon": "portfolio"
+    },
+    {
+      "key": "exchange",
+      "label": "Exchange",
+      "route": "/exchange",
+      "icon": "exchange"
+    },
+    {
+      "key": "markets",
+      "label": "Markets",
+      "route": "/markets",
+      "icon": "markets"
+    },
+    {
+      "key": "profile",
+      "label": "Profile",
+      "route": "/profile",
+      "icon": "profile"
+    }
+  ]
+}

@@ -1,22 +1,26 @@
-import { Link, router } from 'expo-router';
-import { useState } from 'react';
-import { KeyboardAvoidingView, Platform, View } from 'react-native';
-import { SvgXml } from 'react-native-svg';
+import { Link, router } from "expo-router";
+import { useState } from "react";
+import { KeyboardAvoidingView, Platform, View } from "react-native";
+import { SvgXml } from "react-native-svg";
 
-import { AuthCard } from '@/components/ui/auth-card';
-import { Button } from '@/components/ui/button';
-import { AppText } from '@/components/ui/text';
-import { TextField } from '@/components/ui/text-field';
-import { AppView } from '@/components/ui/view';
-import { AUTH_ASSETS } from '@/constants/auth-assets';
-import { AUTH_COPY, AUTH_FIELDS, AUTH_ROUTES } from '@/constants/auth';
-import { useAuth } from '@/lib/auth/auth-context';
-import { hasErrors, validateLogin, type AuthErrors } from '@/lib/auth/validation';
-import type { LoginInput } from '@/lib/auth/types';
+import { AuthCard } from "@/components/ui/auth-card";
+import { Button } from "@/components/ui/button";
+import { AppText } from "@/components/ui/text";
+import { TextField } from "@/components/ui/text-field";
+import { AppView } from "@/components/ui/view";
+import { AUTH_COPY, AUTH_FIELDS, AUTH_ROUTES } from "@/constants/auth";
+import { AUTH_ASSETS } from "@/constants/auth-assets";
+import { useAuth } from "@/lib/sevices/auth/auth-context";
+import type { LoginInput } from "@/lib/sevices/auth/types";
+import {
+    hasErrors,
+    validateLogin,
+    type AuthErrors,
+} from "@/lib/sevices/auth/validation";
 
 const initialForm: LoginInput = {
-  email: '',
-  password: '',
+  email: "",
+  password: "",
 };
 
 export default function LoginScreen() {
@@ -41,13 +45,21 @@ export default function LoginScreen() {
 
   return (
     <AppView className="flex-1 justify-center bg-pario-ink px-2">
-      <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
+      <KeyboardAvoidingView
+        behavior={Platform.OS === "ios" ? "padding" : undefined}
+      >
         <AuthCard className="gap-7 border-0 bg-transparent p-0 dark:bg-transparent">
           <View className="items-center gap-3 px-3">
-            <AppText className="text-center text-[28px] text-foreground-dark" variant="title">
+            <AppText
+              className="text-center text-[28px] text-foreground-dark"
+              variant="title"
+            >
               {AUTH_COPY.login.title}
             </AppText>
-            <AppText className="text-center text-sm text-muted-foreground-dark" variant="muted">
+            <AppText
+              className="text-center text-sm text-muted-foreground-dark"
+              variant="muted"
+            >
               {AUTH_COPY.login.description}
             </AppText>
           </View>
@@ -64,7 +76,10 @@ export default function LoginScreen() {
 
           <View className="flex-row items-center gap-3">
             <View className="h-px flex-1 bg-border-dark" />
-            <AppText className="text-xs text-muted-foreground-dark" variant="muted">
+            <AppText
+              className="text-xs text-muted-foreground-dark"
+              variant="muted"
+            >
               {AUTH_COPY.login.divider}
             </AppText>
             <View className="h-px flex-1 bg-border-dark" />
@@ -79,7 +94,9 @@ export default function LoginScreen() {
               keyboardType="email-address"
               label={AUTH_FIELDS.email.label}
               labelClassName="text-foreground-dark"
-              onChangeText={(email) => setForm((current) => ({ ...current, email }))}
+              onChangeText={(email) =>
+                setForm((current) => ({ ...current, email }))
+              }
               placeholder={AUTH_FIELDS.email.placeholder}
               textContentType="emailAddress"
               value={form.email}
@@ -90,7 +107,9 @@ export default function LoginScreen() {
               error={errors.password}
               label={AUTH_FIELDS.password.label}
               labelClassName="text-foreground-dark"
-              onChangeText={(password) => setForm((current) => ({ ...current, password }))}
+              onChangeText={(password) =>
+                setForm((current) => ({ ...current, password }))
+              }
               placeholder={AUTH_FIELDS.password.placeholder}
               secureTextEntry
               textContentType="password"

@@ -1,11 +1,11 @@
 import { Link, router } from "expo-router";
 import { useState } from "react";
 import {
-  KeyboardAvoidingView,
-  Linking,
-  Platform,
-  Pressable,
-  View,
+    KeyboardAvoidingView,
+    Linking,
+    Platform,
+    Pressable,
+    View,
 } from "react-native";
 import { SvgXml } from "react-native-svg";
 
@@ -16,13 +16,13 @@ import { TextField } from "@/components/ui/text-field";
 import { AppView } from "@/components/ui/view";
 import { AUTH_COPY, AUTH_FIELDS, AUTH_ROUTES } from "@/constants/auth";
 import { AUTH_ASSETS } from "@/constants/auth-assets";
-import { useAuth } from "@/lib/auth/auth-context";
-import type { SignupInput } from "@/lib/auth/types";
+import { useAuth } from "@/lib/sevices/auth/auth-context";
+import type { SignupInput } from "@/lib/sevices/auth/types";
 import {
-  hasErrors,
-  validateSignup,
-  type AuthErrors,
-} from "@/lib/auth/validation";
+    hasErrors,
+    validateSignup,
+    type AuthErrors,
+} from "@/lib/sevices/auth/validation";
 
 const initialForm: SignupInput = {
   email: "",

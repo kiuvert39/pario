@@ -34,6 +34,7 @@
       "accent": "#F0A500",
       "accentHover": "#FFB522",
       "accentForeground": "#0E1116",
+      "navActive": "#4F5DEB",
       "icon": "#5A6472"
     },
     "dark": {
@@ -49,6 +50,7 @@
       "accent": "#F0A500",
       "accentHover": "#FFB522",
       "accentForeground": "#0E1116",
+      "navActive": "#7D88FF",
       "icon": "#C9D1D9"
     }
   }

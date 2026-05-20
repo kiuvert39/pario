@@ -27,6 +27,7 @@ module.exports = {
         accent: theme.colors.light.accent,
         'accent-hover': theme.colors.light.accentHover,
         'accent-foreground': theme.colors.light.accentForeground,
+        'nav-active': theme.colors.light.navActive,
         icon: theme.colors.light.icon,
         'background-dark': theme.colors.dark.background,
         'foreground-dark': theme.colors.dark.foreground,
@@ -40,6 +41,7 @@ module.exports = {
         'accent-dark': theme.colors.dark.accent,
         'accent-hover-dark': theme.colors.dark.accentHover,
         'accent-foreground-dark': theme.colors.dark.accentForeground,
+        'nav-active-dark': theme.colors.dark.navActive,
         'icon-dark': theme.colors.dark.icon,
       },
       fontFamily: {

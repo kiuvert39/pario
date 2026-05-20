@@ -1,10 +1,10 @@
-import { AUTH_FIELDS } from '@/constants/auth';
+import { AUTH_FIELDS } from "@/constants/auth";
 import type {
-  ForgotPasswordInput,
-  LoginInput,
-  OtpInput,
-  SignupInput,
-} from '@/lib/auth/types';
+    ForgotPasswordInput,
+    LoginInput,
+    OtpInput,
+    SignupInput,
+} from "@/lib/sevices/auth/types";
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -13,12 +13,12 @@ export type AuthErrors<TInput> = Partial<Record<keyof TInput, string>>;
 export function validateLogin(input: LoginInput): AuthErrors<LoginInput> {
   const errors: AuthErrors<LoginInput> = {};
 
-  if (!emailPattern.test(input.email.trim())) {
-    errors.email = 'Enter a valid email address.';
+  if (!input.email.trim()) {
+    errors.email = "Enter your email.";
   }
 
-  if (input.password.length < AUTH_FIELDS.password.minLength) {
-    errors.password = `Use at least ${AUTH_FIELDS.password.minLength} characters.`;
+  if (!input.password.trim()) {
+    errors.password = "Enter your password.";
   }
 
   return errors;
@@ -37,12 +37,12 @@ export function validateSignup(input: SignupInput): AuthErrors<SignupInput> {
 }
 
 export function validateForgotPassword(
-  input: ForgotPasswordInput
+  input: ForgotPasswordInput,
 ): AuthErrors<ForgotPasswordInput> {
   const errors: AuthErrors<ForgotPasswordInput> = {};
 
   if (!emailPattern.test(input.email.trim())) {
-    errors.email = 'Enter a valid email address.';
+    errors.email = "Enter a valid email address.";
   }
 
   return errors;

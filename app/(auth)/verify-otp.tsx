@@ -8,9 +8,13 @@ import { OtpInput } from "@/components/ui/otp-input";
 import { AppText } from "@/components/ui/text";
 import { AppView } from "@/components/ui/view";
 import { AUTH_COPY, AUTH_FIELDS, AUTH_ROUTES } from "@/constants/auth";
-import { useAuth } from "@/lib/auth/auth-context";
-import type { OtpInput as OtpInputValue } from "@/lib/auth/types";
-import { hasErrors, validateOtp, type AuthErrors } from "@/lib/auth/validation";
+import { useAuth } from "@/lib/sevices/auth/auth-context";
+import type { OtpInput as OtpInputValue } from "@/lib/sevices/auth/types";
+import {
+    hasErrors,
+    validateOtp,
+    type AuthErrors,
+} from "@/lib/sevices/auth/validation";
 
 const initialForm: OtpInputValue = {
   code: "",
@@ -25,6 +29,7 @@ export default function VerifyOtpScreen() {
   const [errors, setErrors] = useState<AuthErrors<OtpInputValue>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const showBackLink = flow === "forgot-password";
+  const isCodeComplete = form.code.length === AUTH_FIELDS.otp.length;
 
   async function handleSubmit() {
     const nextErrors = validateOtp(form);
@@ -72,6 +77,7 @@ export default function VerifyOtpScreen() {
 
           <Button
             className="h-14 rounded-full bg-accent active:bg-accent-hover"
+            disabled={!isCodeComplete}
             isLoading={isSubmitting}
             onPress={handleSubmit}
             textClassName="text-accent-foreground"

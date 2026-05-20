@@ -1,13 +1,19 @@
-import { createContext, PropsWithChildren, useContext, useMemo, useState } from 'react';
+import {
+    createContext,
+    PropsWithChildren,
+    useContext,
+    useMemo,
+    useState,
+} from "react";
 
-import * as authService from '@/lib/auth/auth-service';
+import * as authService from "@/lib/sevices/auth/auth-service";
 import type {
-  AuthUser,
-  ForgotPasswordInput,
-  LoginInput,
-  OtpInput,
-  SignupInput,
-} from '@/lib/auth/types';
+    AuthUser,
+    ForgotPasswordInput,
+    LoginInput,
+    OtpInput,
+    SignupInput,
+} from "@/lib/sevices/auth/types";
 
 type AuthContextValue = {
   login: (input: LoginInput) => Promise<void>;
@@ -42,7 +48,7 @@ export function AuthProvider({ children }: PropsWithChildren) {
         await authService.verifyOtp(input);
       },
     }),
-    [user]
+    [user],
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
@@ -50,9 +56,8 @@ export function AuthProvider({ children }: PropsWithChildren) {
 
 export function useAuth() {
   const auth = useContext(AuthContext);
-
   if (!auth) {
-    throw new Error('useAuth must be used within AuthProvider');
+    throw new Error("useAuth must be used within AuthProvider");
   }
 
   return auth;

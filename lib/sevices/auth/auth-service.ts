@@ -4,7 +4,7 @@ import type {
   LoginInput,
   OtpInput,
   SignupInput,
-} from '@/lib/auth/types';
+} from "@/lib/sevices/auth/types";
 
 const fakeRequestDelay = 700;
 
@@ -29,7 +29,9 @@ export async function signup(input: SignupInput): Promise<AuthUser> {
   };
 }
 
-export async function requestPasswordReset(input: ForgotPasswordInput): Promise<void> {
+export async function requestPasswordReset(
+  input: ForgotPasswordInput,
+): Promise<void> {
   void input;
   await wait(fakeRequestDelay);
 }

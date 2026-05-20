@@ -29,16 +29,14 @@ export default function IndexScreen() {
     );
   }, [swing]);
 
-  const primaryCardStyle = useAnimatedStyle(() => ({
-    transform: [{ rotate: `${swing.value}deg` }],
+  const secondaryCardStyle = useAnimatedStyle(() => ({
+    transform: [{ rotate: `${-6 + swing.value}deg` }],
   }));
 
   return (
     <AppView className="flex-1 justify-between bg-pario-ink px-6 pb-10 pt-16">
       <View className="h-[360px]">
-        <Animated.View
-          className="absolute left-0 right-0 top-6 gap-4 rounded-[18px] bg-pario-ink-raised/95 p-4"
-          style={primaryCardStyle}>
+        <View className="absolute left-0 right-0 top-6 gap-4 rounded-[18px] bg-pario-ink-raised/95 p-4">
           <View className="flex-row justify-between">
             <AppText className="text-xs text-foreground-dark">{primaryCard.eyebrowLeft}</AppText>
             <AppText className="text-xs text-foreground-dark">{primaryCard.eyebrowCenter}</AppText>
@@ -65,11 +63,11 @@ export default function IndexScreen() {
               <AppText className="text-lg leading-5 text-accent-foreground">+</AppText>
             </View>
           </View>
-        </Animated.View>
+        </View>
 
-        <View
+        <Animated.View
           className="absolute left-10 right-0 top-44 gap-4 rounded-[18px] bg-pario-ink-raised p-4"
-          style={{ transform: [{ rotate: '-6deg' }] }}>
+          style={secondaryCardStyle}>
           <View className="flex-row justify-between">
             <AppText className="text-xs text-foreground-dark">{secondaryCard.eyebrowLeft}</AppText>
             <AppText className="text-xs text-foreground-dark">{secondaryCard.eyebrowCenter}</AppText>
@@ -96,7 +94,7 @@ export default function IndexScreen() {
               <AppText className="text-lg leading-5 text-accent-foreground">+</AppText>
             </View>
           </View>
-        </View>
+        </Animated.View>
       </View>
 
       <View className="gap-8">

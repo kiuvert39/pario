@@ -6,7 +6,7 @@ export const AUTH_ROUTES = {
   otp: '/verify-otp',
   signup: '/signup',
   onboarding: '/',
-  home: '/',
+  home: '/home',
 } as const;
 
 export const AUTH_FIELDS = {
